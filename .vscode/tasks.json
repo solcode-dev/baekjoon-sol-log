@@ -1,8 +1,8 @@
 {
   "tasks": [
     {
-      "type": "cppbuild",
-      "label": "C/C++: clang 활성 파일 빌드",
+      "type": "shell",
+      "label": "build",
       "command": "/usr/bin/clang++",
       "args": [
         "-fcolor-diagnostics",
@@ -10,7 +10,7 @@
         "-g",
         "${file}",
         "-o",
-        "${fileDirname}/${fileBasenameNoExtension}"
+        "${fileDirname}/build/${fileBasenameNoExtension}"
       ],
       "options": {
         "cwd": "${fileDirname}"
@@ -22,7 +22,7 @@
         "kind": "build",
         "isDefault": true
       },
-      "detail": "디버거에서 생성된 작업입니다."
+      "detail": "Build active file using clang++"
     }
   ],
   "version": "2.0.0"
